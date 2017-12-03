@@ -1,4 +1,4 @@
-#this is also terrible, but it works
+#this is terrible, but it works
 number = int(input("What number? "))
 
 spiral = []
