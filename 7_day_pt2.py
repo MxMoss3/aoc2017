@@ -25,7 +25,6 @@ with open("7_day.txt") as f:
         else:
             break
 
-
     def tree(a):
         t = []
 
@@ -37,7 +36,6 @@ with open("7_day.txt") as f:
                 if len(i) > 3:
                     for c in i[3:]:
                         t.append(tree(c))
-
         return t
     
     def weight(a):
@@ -70,8 +68,6 @@ with open("7_day.txt") as f:
             
         else:
             return True
-            
-
 
     def find_unbal(a, reg):
         children = []
@@ -87,15 +83,12 @@ with open("7_day.txt") as f:
             else:
                 return find_unbal(i, 0)
 
-        
         for i in children:
             if w.count(weight(i)) == 1:
                 odd = i
             else:
                 reg = i
 
-                
         return weight(reg) - (weight(odd) - int(odd[1]))
 
-                
     print(find_unbal(tree(bot), 0))
